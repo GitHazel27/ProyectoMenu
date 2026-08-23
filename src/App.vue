@@ -11,7 +11,7 @@ const movies=["Lord of the Rings", "Star Wars", "Dune", "Batman"]
 
 <template>
   <HeaderComponent></HeaderComponent>
-  <h1 class="title" :class="myCondition ? 'highlight':'red'">Hola a todos</h1>
+  <h1 class="title" :class="myCondition ? 'highlight':'red'">Hola a todos, soy Haz</h1>
   <HelloWorld />
 </template>
 
