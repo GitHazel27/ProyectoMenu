@@ -1,10 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import viteLogo from '../assets/vite.svg'
 import heroImg from '../assets/hero.png'
 import vueLogo from '../assets/vue.svg'
 
+
 const count = ref(0)
+
+function increment(){
+  count.value++
+}
+
+onMounted(() => {
+  console.log(`The inicial count is ${count.value}.`)
+})
 </script>
 
 <template>
@@ -24,6 +33,7 @@ const count = ref(0)
     <button type="button" class="counter" @click="count++">
       Count is {{ count }}
     </button>
+    <button @click="increment">Count is: {{ count }}</button>
   </section>
 
   <div class="ticks"></div>
